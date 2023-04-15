@@ -49,9 +49,10 @@ class ShopFragment : Fragment() {
             val dialog = AlertDialog.Builder(requireContext())
                 .setMessage("Вы точно хотите купить эти обои?")
                 .setPositiveButton("Да") { _, _ ->
-                    (requireContext() as MainActivity).buyWallpaper(it.price)
-                    Toast.makeText(context, "Обои куплены", Toast.LENGTH_SHORT).show()
-                    setWallpaper(it.image)
+                    if((requireContext() as MainActivity).buyWallpaper(it.price)) {
+                        Toast.makeText(context, "Обои куплены", Toast.LENGTH_SHORT).show()
+                        setWallpaper(it.image)
+                    }
                 }
                 .setNegativeButton("Нет") { _, _ ->
                 }

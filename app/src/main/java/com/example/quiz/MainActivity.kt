@@ -87,6 +87,6 @@ class MainActivity : AppCompatActivity() {
         private const val BALANCE = "balance"
         private const val EASY_TIME = 45
         private const val MEDIUM_TIME = 30
-        private const val HARD_TIME = 5
+        private const val HARD_TIME = 15
     }
 }
