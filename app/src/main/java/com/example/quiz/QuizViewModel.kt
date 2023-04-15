@@ -1,21 +1,27 @@
 package com.example.quiz
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class QuizViewModel: ViewModel() {
+class QuizViewModel : ViewModel() {
     private val repository = Repository()
 
-    val wallpapersLD = MutableLiveData<List<Wallpaper>>()
-    val currentQuizLD = MutableLiveData<List<Question>>()
+    private val _wallpapersLD = MutableLiveData<List<Wallpaper>>()
+    val wallpapersLD: LiveData<List<Wallpaper>>
+        get() = _wallpapersLD
 
-    fun getQuestions(){
+    private val _currentQuizLD = MutableLiveData<List<Question>>()
+    val currentQuizLD: LiveData<List<Question>>
+        get() = _currentQuizLD
+
+    fun getQuestions() {
         val questions = repository.getQuestions()
-        currentQuizLD.postValue(questions)
+        _currentQuizLD.postValue(questions)
     }
 
-    fun getWallpapers(){
+    fun getWallpapers() {
         val wallpapers = repository.getWallpapers()
-        wallpapersLD.postValue(wallpapers)
+        _wallpapersLD.postValue(wallpapers)
     }
 }

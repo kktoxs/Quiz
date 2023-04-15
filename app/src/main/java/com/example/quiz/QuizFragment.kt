@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -86,7 +85,7 @@ class QuizFragment : Fragment() {
     }
 
     private fun startTimeOut() {
-        var seconds = arguments?.getInt("seconds")
+        var seconds = arguments?.getInt(MainActivity.SECONDS_ARGUMENT)
             ?: throw RuntimeException("unknown difficulty")
         updateTimer(seconds)
         timer = object : CountDownTimer(
@@ -125,7 +124,6 @@ class QuizFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         timer.cancel()
-        Log.d("quiz","destroy")
     }
 
     companion object {

@@ -1,7 +1,5 @@
 package com.example.quiz
 
-import android.app.appsearch.StorageInfo
-
 class Question(
     val title: String,
     val answerA: String,

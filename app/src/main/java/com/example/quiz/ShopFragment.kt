@@ -9,10 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.quiz.databinding.FragmentShopBinding
 
 class ShopFragment : Fragment() {
@@ -47,14 +45,15 @@ class ShopFragment : Fragment() {
         binding.wallpapersRecycler.layoutManager = LinearLayoutManager(requireContext())
         adapter.onWallpaperClickListener = {
             val dialog = AlertDialog.Builder(requireContext())
-                .setMessage("Вы точно хотите купить эти обои?")
-                .setPositiveButton("Да") { _, _ ->
-                    if((requireContext() as MainActivity).buyWallpaper(it.price)) {
-                        Toast.makeText(context, "Обои куплены", Toast.LENGTH_SHORT).show()
+                .setMessage(R.string.are_you_sure)
+                .setPositiveButton(R.string.yes) { _, _ ->
+                    if ((requireContext() as MainActivity).buyWallpaper(it.price)) {
+                        Toast.makeText(context, R.string.bought_successful, Toast.LENGTH_SHORT)
+                            .show()
                         setWallpaper(it.image)
                     }
                 }
-                .setNegativeButton("Нет") { _, _ ->
+                .setNegativeButton(R.string.no) { _, _ ->
                 }
                 .create()
             dialog.show()

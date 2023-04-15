@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 .apply()
             true
         } else {
-            Toast.makeText(this, "Недостаточно средств", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.not_enough_money, Toast.LENGTH_SHORT).show()
             false
         }
     }
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         val quizFragment = QuizFragment()
         quizFragment.apply {
             arguments = Bundle().apply {
-                putInt("seconds", seconds)
+                putInt(SECONDS_ARGUMENT, seconds)
             }
         }
         supportFragmentManager.beginTransaction()
@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
+        const val SECONDS_ARGUMENT = "seconds"
         private const val BALANCE = "balance"
         private const val EASY_TIME = 45
         private const val MEDIUM_TIME = 30

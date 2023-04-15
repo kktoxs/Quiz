@@ -7,4 +7,9 @@
     <string name="medium">средне</string>
     <string name="hard">Сложно</string>
     <string name="balance">Баланс:</string>
+    <string name="not_enough_money">Недостаточно средств</string>
+    <string name="are_you_sure">Вы точно хотите купить эти обои?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="bought_successful">Обои куплены</string>
 </resources>
