@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.quiz.viewModel.QuizViewModel
 import com.example.quiz.R
+import com.example.quiz.WallpapersAdapter
 import com.example.quiz.databinding.FragmentShopBinding
 
 class ShopFragment : Fragment() {

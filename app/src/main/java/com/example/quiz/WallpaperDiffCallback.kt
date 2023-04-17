@@ -1,4 +1,4 @@
-package com.example.quiz.view
+package com.example.quiz
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.quiz.model.Wallpaper
