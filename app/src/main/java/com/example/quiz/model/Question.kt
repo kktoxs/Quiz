@@ -1,4 +1,4 @@
-package com.example.quiz
+package com.example.quiz.model
 
 class Question(
     val title: String,

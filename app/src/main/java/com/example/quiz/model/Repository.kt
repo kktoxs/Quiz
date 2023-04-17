@@ -1,4 +1,6 @@
-package com.example.quiz
+package com.example.quiz.model
+
+import com.example.quiz.R
 
 class Repository {
     private val questionList: List<Question> = listOf(

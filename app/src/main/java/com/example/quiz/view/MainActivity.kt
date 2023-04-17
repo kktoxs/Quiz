@@ -1,10 +1,11 @@
-package com.example.quiz
+package com.example.quiz.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.quiz.viewModel.QuizViewModel
+import com.example.quiz.R
 import com.example.quiz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

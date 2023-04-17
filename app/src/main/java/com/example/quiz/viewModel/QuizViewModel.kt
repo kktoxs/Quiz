@@ -1,8 +1,11 @@
-package com.example.quiz
+package com.example.quiz.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.quiz.model.Question
+import com.example.quiz.model.Repository
+import com.example.quiz.model.Wallpaper
 
 class QuizViewModel : ViewModel() {
     private val repository = Repository()

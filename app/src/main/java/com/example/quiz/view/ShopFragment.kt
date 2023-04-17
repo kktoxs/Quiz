@@ -1,4 +1,4 @@
-package com.example.quiz
+package com.example.quiz.view
 
 import android.app.AlertDialog
 import android.app.WallpaperManager
@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.quiz.viewModel.QuizViewModel
+import com.example.quiz.R
 import com.example.quiz.databinding.FragmentShopBinding
 
 class ShopFragment : Fragment() {

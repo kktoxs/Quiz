@@ -1,4 +1,4 @@
-package com.example.quiz
+package com.example.quiz.view
 
 import android.content.Context
 import android.graphics.Color
@@ -11,6 +11,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import com.example.quiz.model.Question
+import com.example.quiz.viewModel.QuizViewModel
+import com.example.quiz.R
 import com.example.quiz.databinding.FragmentQuizBinding
 
 class QuizFragment : Fragment() {
